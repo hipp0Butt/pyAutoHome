@@ -42,7 +42,7 @@ if __name__ == "__main__":
 	if os.name == 'posix':
 		device = '/dev/ttyUSB0'
 	elif os.name == 'nt':
-		device = 0
+		device = 3
 	else:
 		device = 'unknown'
 
@@ -55,7 +55,10 @@ if __name__ == "__main__":
 		elif opt in ('-s', '--set'):
 			state = arg
 		elif opt in ('-d', '--device'):
-			device = arg
+			if os.name = 'nt':
+				device = int(arg)
+			else:
+				device = arg
 		else:
 			print 'Unknown option: %s' % opt
 
@@ -65,7 +68,7 @@ if __name__ == "__main__":
 			sys.exit(1)
 
 
-		if state.lower() == 'on':
-			turnLightsOn(device)
-		elif state.lower() == 'off':
-			turnLightsOff(device)
+	if state.lower() == 'on':
+		turnLightsOn(device)
+	elif state.lower() == 'off':
+		turnLightsOff(device)
