@@ -113,6 +113,7 @@ def main():
 						pckt = data.rstrip().split(';')
 						ret = processPacket(pckt)
 						x.send(str(ret) + '\n')
+						x.close()
 		#except e:
 		#	log(logfile, "ERROR: " + str(e))
 		#	sys.exit(1)
