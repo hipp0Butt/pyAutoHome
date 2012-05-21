@@ -114,6 +114,7 @@ def main():
 						ret = processPacket(pckt)
 						x.send(str(ret) + '\n')
 						x.close()
+						pot_readers.remove(x)
 		#except e:
 		#	log(logfile, "ERROR: " + str(e))
 		#	sys.exit(1)
