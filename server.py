@@ -8,7 +8,7 @@ import select
 import pickle
 import commands
 
-HOST = socket.gethostname()
+HOST = '0.0.0.0'
 PORT = 6969
 BACKLOG = 5
 LOGFILE = './server.log'
