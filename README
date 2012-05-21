@@ -1,0 +1,3 @@
+Just a collection of scripts for home automation purposes.  Ideally all of the scripts work on both windows linux and mac.
+
+lightControl.py - Interfaces with the Wunderboard (from TekBots).  Right now, the firmware interfaces via UART over USB.  Sending a simple '61' will turn the lights on, '71' will turn them off.
